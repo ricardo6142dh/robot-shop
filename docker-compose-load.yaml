@@ -4,14 +4,10 @@ services:
     build:
       context: load-gen
     environment:
-      HOST: http://web:8080
+      HOST: http://201.54.12.94:8080/
       NUM_CLIENTS: 15
       RUN_TIME: 30m
       ERROR: 1
-    networks:
-      - robot-shop
-    depends_on:
-      - web
     logging: &logging
       driver: "json-file"
       options:
